@@ -12,9 +12,22 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <ul>
+      <li>
+        <a href="/users">
+          Users
+        </a>
+      </li>
+      <li>
+        <a href="/photos">
+          Photos
+        </a>
+      </li>
+    </ul>
   </head>
 
   <body>
     <%= yield %>
   </body>
 </html>
+
