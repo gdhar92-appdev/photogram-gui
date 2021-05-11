@@ -13,7 +13,12 @@ class UsersController < ApplicationController
     url_username = params.fetch("path_username")
     matching_usernames = User.where({ :username => url_username})
     @the_user = matching_usernames.first
-    render({ :template => "user_templates/show.html.erb"})
+    
+    if @the_user == nil
+      redirect_to("/404")
+    else
+      render({ :template => "user_templates/show.html.erb"})
+    end
 
   end
 
