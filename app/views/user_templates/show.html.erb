@@ -29,7 +29,7 @@
   <% @the_user.own_photos.each do |a_photo| %>
     <tr>
       <td>
-        <%= a_photo.image %>
+        <img src="<%= a_photo.image %>">
       </td>
       <td>
         <%= @the_user.username %>
@@ -41,7 +41,9 @@
         <%= a_photo.created_at %>
       </td>
       <td>
-        Show details
+        <a href="/photos/<%= a_photo.id %>">
+          Show details
+        </a>
       </td>
     </tr>
   <% end %>
